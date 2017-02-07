@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS site</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+    <!--Use this base HTML (feel free to change it) to build a simple app that generates the HTML for a dating profile in this format,
+        using information collected from the user
+        Show a preview of the dating profile with rendered HTML (e.g. <em>hella charming</em> should appear as hella charming)
+        Also show the raw, generated HTML inside the <pre><code></code></pre> elements (e.g. <em>hella charming</em> should appear as <em>hella charming</em>)
+        Both the preview and raw HTML should update live as the user enters their information
+        All JavaScript is in a separate .js file
+        There are no linting errors in your JavaScript (this will also be expected for all future projects)-->
+    <style>
+      /* Wrap code blocks instead of overflowing */
+      pre > code {
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dating profile generator</h1>
+      <p class="tagline">
+        Create your own dating profile, that you fully own! Simply enter your personal information below and the HTML for your profile will start writing itself automatically.
+      </p>
+      <h2>Personal</h2>
+      <div class="row">
+        <div class="six columns">
+          <label>First name</label>
+          <input type="text" id="first" class="u-full-width">
+        </div>
+        <div class="six columns">
+          <label>Last name</label>
+          <input type="text" id="last" class="u-full-width">
+        </div>
+      </div>
+      <label>Briefly describe yourself</label>
+      <textarea id="describe" class="u-full-width"></textarea>
+      <h2>Contact</h2>
+      <div class="row">
+        <div class="six columns">
+          <label>Email</label>
+          <input type="email" id="email" class="u-full-width">
+        </div>
+        <div class="six columns">
+          <label>Phone</label>
+          <input type="tel" id="phone" class="u-full-width">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="six columns">
+          <h2>Preview</h2>
+          <div id="date-preview">
+            <h1 id="name-out">Hi, my name is FIRST_NAME LAST_NAME!</h1>
+            <p id="describe-out">DESCRIBE_YOURSELF_INFO</p>
+            <p id="contact-out">
+              If you're interested in a date, you can email me at
+              <a href="mailto:EMAIL_ADDRESS" target="_blank">EMAIL_ADDRESS</a>
+              or give me a call at
+              <a href="tel:PHONE_NUMBER" target="_blank">PHONE_NUMBER</a>.
+            </p>
+          </div>
+        </div>
+        <div class="six columns">
+          <h2>Generated HTML</h2>
+          <div>
+            <pre><code id ="code-preview">
+              THIS IS WHERE THE RAW HTML SHOULD APPEAR
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
